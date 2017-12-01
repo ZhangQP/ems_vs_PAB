@@ -7,7 +7,8 @@ The initial size of AB and PABs are all 80,000,000 Bytes.
 
 1. ems
   examples: streams_bulk_sync_parallel.js, streams_withAB.js 
-  run with "$ time node *** n       n is the number of processes.
+  run with "$ time node *** n       
+  //n is the number of processes.
   
 2. node with PAB
   examples: AB_opts.js, PAB_opts.js and PAB_opts_1.js
