@@ -9,7 +9,7 @@ Experiments
 	The initial size of ABs and PABs are all 80,000,000 Bytes, and the TypeArray is Uint32Array.
 
 	1.  ems
-		examples: streams_bulk_sync_parallel.js (native stream example of ems) , streams_withAB.js 
+		examples: streams_bulk_sync_parallel.js (native STREAMS example of ems) , streams_withAB.js 
 		run with "$ time node *** n       
 		//n is the number of processes.
   
