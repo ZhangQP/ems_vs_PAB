@@ -5,10 +5,11 @@ This repository compares the performance of ems (https://www.npmjs.com/package/e
 Experiments
 
 	example.js is an example of PAB.
-	The initial size of AB and PABs are all 80,000,000 Bytes.
+	Number of operations for each experiment is 20,000,000. 
+	The initial size of ABs and PABs are all 80,000,000 Bytes, and the TypeArray is Uint32Array.
 
 	1.  ems
-		examples: streams_bulk_sync_parallel.js, streams_withAB.js 
+		examples: streams_bulk_sync_parallel.js (native stream example of ems) , streams_withAB.js 
 		run with "$ time node *** n       
 		//n is the number of processes.
   
