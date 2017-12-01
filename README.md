@@ -15,6 +15,7 @@ Experiments
   
 	2.  node with PAB
 		examples: AB_opts.js, PAB_opts.js and PAB_opts_1.js
+		Difference between PAB_opts.js and PAB_opts_1.js lies on whether the msync() of PAB write is counted in the time.
 		run with "$ ./node ***"
 
 Results
