@@ -1,0 +1,1 @@
+cmd_/home/how/projects/quicklake-js-node/out/Release/obj.target/tools/icu/libicudata.a := rm -f /home/how/projects/quicklake-js-node/out/Release/obj.target/tools/icu/libicudata.a && ar crsT /home/how/projects/quicklake-js-node/out/Release/obj.target/tools/icu/libicudata.a /home/how/projects/quicklake-js-node/out/Release/obj.target/icudata/gen/icusmdt60_dat.o

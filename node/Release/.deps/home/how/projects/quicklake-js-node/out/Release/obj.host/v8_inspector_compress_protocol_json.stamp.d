@@ -1,0 +1,1 @@
+cmd_/home/how/projects/quicklake-js-node/out/Release/obj.host/v8_inspector_compress_protocol_json.stamp := touch /home/how/projects/quicklake-js-node/out/Release/obj.host/v8_inspector_compress_protocol_json.stamp

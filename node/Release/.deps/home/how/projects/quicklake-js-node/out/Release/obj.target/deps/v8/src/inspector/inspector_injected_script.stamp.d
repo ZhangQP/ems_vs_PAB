@@ -1,0 +1,1 @@
+cmd_/home/how/projects/quicklake-js-node/out/Release/obj.target/deps/v8/src/inspector/inspector_injected_script.stamp := touch /home/how/projects/quicklake-js-node/out/Release/obj.target/deps/v8/src/inspector/inspector_injected_script.stamp
