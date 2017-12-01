@@ -37,7 +37,7 @@
 //  Also see the Fork-Join version in the Examples directory
 // ===============================================================================
 var ems = require('ems')(parseInt(process.argv[2]), false);
-var arrLen = 10000000;
+var arrLen = 20000000;
 var a = ems.new(arrLen);
 var b = ems.new(arrLen);
 var c = ems.new(arrLen);

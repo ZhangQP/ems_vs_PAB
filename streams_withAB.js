@@ -1,13 +1,13 @@
 //  Also see the Fork-Join version in the Examples directory
 // ===============================================================================
 var ems = require('ems')(parseInt(process.argv[2]), false);
-var arrLen = 10000000;
+var arrLen = 20000000;
 var a = ems.new(arrLen);
 var b = ems.new(arrLen);
 var c = ems.new(arrLen);
-var x = new Uint8Array(new ArrayBuffer(arrLen*8));
-var y = new Uint8Array(new ArrayBuffer(arrLen*8));
-var z = new Uint8Array(new ArrayBuffer(arrLen*8));
+var x = new Uint32Array(new ArrayBuffer(arrLen*4));
+var y = new Uint32Array(new ArrayBuffer(arrLen*4));
+var z = new Uint32Array(new ArrayBuffer(arrLen*4));
 
 //-------------------------------------------------------------------
 //  Timer function

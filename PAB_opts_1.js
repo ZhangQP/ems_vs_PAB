@@ -1,10 +1,10 @@
-var arrLen = 10000000;
-pab_x = new PersistentArrayBuffer(arrLen * 8, "/home/zhangqp/PAB_test/pabfile/pab_x", "c");
-pab_y = new PersistentArrayBuffer(arrLen * 8, "/home/zhangqp/PAB_test/pabfile/pab_y", "c");
-pab_z = new PersistentArrayBuffer(arrLen * 8, "/home/zhangqp/PAB_test/pabfile/pab_z", "c")
-var x = new Uint8Array(pab_x);
-var y = new Uint8Array(pab_y);
-var z = new Uint8Array(pab_z);
+var arrLen = 20000000;
+pab_x = new PersistentArrayBuffer(arrLen * 4, "/home/zhangqp/PAB_test/pabfile/pab_x", "c");
+pab_y = new PersistentArrayBuffer(arrLen * 4, "/home/zhangqp/PAB_test/pabfile/pab_y", "c");
+pab_z = new PersistentArrayBuffer(arrLen * 4, "/home/zhangqp/PAB_test/pabfile/pab_z", "c")
+var x = new Uint32Array(pab_x);
+var y = new Uint32Array(pab_y);
+var z = new Uint32Array(pab_z);
 
 function stopTimer(timer, nOps, label) {
     function fmtNumber(n) {
@@ -24,12 +24,12 @@ var idx;
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) {  x[idx] = idx }
 stopTimer(timeStart, arrLen, " write   ");
-pab_x.msync(0, arrLen * 8);
+pab_x.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) {  x[idx] += idx }
 stopTimer(timeStart, arrLen, " rd/write");
-pab_x.msync(0, arrLen * 8);
+pab_x.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 var dummy = 0;
@@ -43,22 +43,22 @@ stopTimer(timeStart, arrLen, " reread  ");
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) { y[idx] = x[idx] }
 stopTimer(timeStart, arrLen, " copy    ");
-pab_y.msync(0, arrLen * 8);
+pab_y.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) { y[idx] += x[idx] }
 stopTimer(timeStart, arrLen, " rmwcopy ");
-pab_y.msync(0, arrLen * 8);
+pab_y.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) { z[idx] = x[idx] * y[idx] }
 stopTimer(timeStart, arrLen, " c=a*b   ");
-pab_z.msync(0, arrLen * 8);
+pab_z.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 for(idx = 0;  idx < arrLen;  idx++ ) { z[idx] += x[idx] * y[idx] }
 stopTimer(timeStart, arrLen, " c+=a*b  ");
-pab_z.msync(0, arrLen * 8);
+pab_z.msync(0, arrLen * 4);
 
 timeStart = new Date().getTime();
 stopTimer(timeStart, arrLen, " sum ");
