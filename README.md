@@ -27,4 +27,4 @@ Experiments
 
 Results
 	
-	The experiment results are in the excel file "results.excel".
+	The experiment results are in the excel file "results.xlsx".
