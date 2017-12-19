@@ -1,0 +1,51 @@
+{
+  "name": "ems",
+  "version": "1.5.0",
+  "author": "Synthetic Semantics <info@synsem.com>",
+  "description": "Persistent Shared Memory and Parallel Programming Model",
+  "contributors": [
+    {
+      "name": "Jace A Mogill",
+      "email": "mogill@synsem.com"
+    }
+  ],
+  "scripts": {
+    "test": "cd Tests && rm -f EMSthreadStub.js && for test in `ls *js`; do node $test 8; err=$?; echo $test \": ERROR=\" $err;  if [ $err -ne 0 ] ; then exit 1; fi; done",
+    "example": "cd Examples; node concurrent_Q_and_TM.js 8"
+  },
+  "main": "nodejs/ems.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syntheticsemantics/ems.git"
+  },
+  "homepage": "https://synsem.com/EMS.js",
+  "keywords": [
+    "non volatile memory",
+    "NVM",
+    "NVMe",
+    "multithreading",
+    "multithreaded",
+    "parallel",
+    "parallelism",
+    "concurrency",
+    "shared memory",
+    "multicore",
+    "manycore",
+    "transactional memory",
+    "TM",
+    "persistent memory",
+    "pmem",
+    "Extended Memory Semantics",
+    "EMS"
+  ],
+  "license": "BSD-3-Clause",
+  "engines": {
+    "node": ">=0.10.25"
+  },
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "ffi": "^2.0.0",
+    "nan": "^2.1.0",
+    "node-gyp": "^3.2.1"
+  }
+}

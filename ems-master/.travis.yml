@@ -1,0 +1,38 @@
+language: node_js
+
+os:
+  - linux
+
+dist: trusty
+
+node_js:
+  - "8.1"
+  - "7.1"
+  - "6.1"
+  - "5.1"
+  - "4.1"
+  - "0.10"
+
+before_script:
+  - npm link ../ems
+  - sudo -H apt-get install python-pip
+  - sudo -H apt-get install python3-pip
+  - sudo -H apt-get install libffi-dev
+  - sudo python3 -m pip install cffi
+  - sudo python -m pip install cffi
+  - sudo -H apt-get install python3-cffi
+
+script:
+  - make test
+
+env:
+  - CXX=g++-4.8
+
+sudo: true
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
