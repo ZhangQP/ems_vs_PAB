@@ -15,8 +15,8 @@ The folder "ems_master" is the raw code and tests of ems copied from  [ems](http
 
 ### Content:
 1.ems <br>
-examples: streams_bulk_sync_parallel.js (native STREAMS example of ems) <br>
-run with "$ time node (testfile_path) n  <br>     
+		examples: streams_bulk_sync_parallel.js (native STREAMS example of ems)
+		run with "$ time node (testfile_path) n   
 //n is the number of processes <br>  
 
 2.node with PAB <br>  
