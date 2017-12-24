@@ -4,7 +4,7 @@ This repository compares the performance of ems (https://www.npmjs.com/package/e
 
 The folder "ems_master" is the raw code and tests of ems copied from  https://github.com/SyntheticSemantics/ems.
 
-Experiments
+# Experiments
 
 	Size:
 		Number of operations for each experiment is 20,000,000. 
@@ -25,6 +25,6 @@ Experiments
 		A compiled node version which supports PAB is in the folder "node". You can use it directly or install first.
 		run with "$ /node/Release/node (testfile_path)"
 
-Results
+# Results
 	
 	The experiment results are in the excel file "results.xlsx".
