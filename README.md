@@ -6,14 +6,14 @@ The folder "ems_master" is the raw code and tests of ems copied from  [ems](http
 
 ## Experiments
 
-### Size:
+* Size:
 Number of operations for each experiment is 20,000,000. 
 The initial size of ABs and PABs are all 80,000,000 Bytes, and the TypeArray is Uint32Array.
 	
-### Disks:
+* Disks:
 There are five different disks: HDD, SSD, [emu_pmem](http://pmem.io/2016/02/22/pm-emulation.html), ramdisk and Optane.
 
-### Content:
+* Content:
 1.  ems
     examples: streams_bulk_sync_parallel.js (native STREAMS example of ems)
     run with "$ time node (testfile_path) n       
