@@ -20,9 +20,9 @@ The folder "ems_master" is the raw code and tests of ems copied from  [ems](http
  //n is the number of processes <br>  
 
 2. node with PAB <br>
-Examples: AB_opts.js, PAB_opts.js and PAB_opts_nomsync.js <br>  
-Difference between PAB_opts.js and PAB_opts_nomsync.js lies on whether the msync() of PAB write is counted in the time. <br>  
-A compiled node version which supports PAB is in the folder "node". You can use it directly or install first. <br>  
+Examples: AB_opts.js, PAB_opts.js and PAB_opts_nomsync.js <br>
+Difference between PAB_opts.js and PAB_opts_nomsync.js lies on whether the msync() of PAB write is counted in the time. <br> 
+A compiled node version which supports PAB is in the folder "node". You can use it directly or install first. <br> 
 Run with "$ /node/Release/node (testfile_path)" <br>  
 
 ## Results
